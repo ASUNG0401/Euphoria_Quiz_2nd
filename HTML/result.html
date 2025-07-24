@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>결과 보기</title>
+  <link rel="stylesheet" href="../CSS/result.css" />
+</head>
+<body>
+  <div class="result-container">
+    <h1>🎉 퀴즈 완료!</h1>
+    <p id="result-text">당신의 점수는: 0점입니다.</p>
+    <button onclick="location.href='../HTML/main.html'" class="restart-btn">다시하기</button>
+  </div>
+
+  <script>
+    const score = localStorage.getItem("score") || 0;
+    document.getElementById("result-text").textContent = `당신의 점수는 ${score}점입니다.`;
+  </script>
+</body>
+</html>
